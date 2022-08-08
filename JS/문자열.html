@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열</title>
+</head>
+<body>
+    <script>
+        
+ //1. 문자열의 +
+ let str1="hello";
+        let str2="world";
+
+        console.log(str1);
+        console.log(str2);
+        console.log(str1+str2);
+
+    // 2. 문자열의 추출
+    console.log(str1[0]);
+    console.log(str1[1]);
+    console.log("이순신장군님"[2]);
+    // 이순신장군님은 메모리박스가있기에 정상적으로 값이 나오는것
+
+    // 3. 문자열의 길이
+    console.log(str2.length);
+    console.log("이순신장군님".length);
+
+    // 4. 문자열과 다른 값들을 같이 표현
+    let val1 =10; // number
+    let val2 =50;
+
+    console.log(val1+ str1);
+    console.log(str2+val1);
+    console.log(val1+val2);
+// 문자와 숫자를 같이 쓰면 숫자를 문자로 인식함. 
+
+ // 5. 템플릿 문자열
+ console.log(`val1의 값은 ${val1}이고 val2의 값은 ${val2}입니다.`); //템플릿 문자열이라함. 
+ console.log('val1의 값은' +val1+ '이고 val2의 값은' +val2+'입니다.');
+
+// 6. 문자열의 입력
+// const input = prompt('Email을 입력하세요','example@naver.com');
+// alert(input);
+
+// 7. yes / no 입력받기
+// const yesno = confirm('저장하시겠습니까?');
+// console.log(yesno);
+
+// 8. 문자를 숫자로 변환
+// "200"->200
+let strval = '200';
+let strnum = Number(strval);
+console.log(`strnum의 자료형은 ${typeof(strnum)} 입니다.`);
+
+//  9. 숫자를 문자로 바꾸기
+let strval1 = String(val1);
+// let strval1 = val1 + ''; 이렇게 사용하는 법도 있지만, 좋은 방법은 아님. 
+console.log( `strval1의 자료형은 ${typeof(strval1)} 이고 값은 ${strval1}이다`);
+
+
+// 연습문제
+// 달러에서 원화로 환율을 변환하는 프로그램 만들기 / 달러를 입력받아 원으로 출력
+
+const rate = 1300;
+//입력
+//달러를 입력받는다. 
+// const usd = prompt('달러를 입력하세요','');
+
+//처리
+//달러를 원화로 계산한다.
+// const won = Number(usd)*rate;
+
+//출력
+//결과를 alert으로 출력한다.
+// alert( won + '원 입니다.');
+
+    </script>
+</body>
+</html>

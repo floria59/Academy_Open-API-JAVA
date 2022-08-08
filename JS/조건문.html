@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 if문</title>
+</head>
+<body>
+    <script>
+
+    //  비교연산은 1. operand가 두개이다. 2.결과가 T/F boolean이다. 3. 복합연산자이다. 
+
+
+    // 조건문 -> 참 거짓을 판단하는 문장 
+    // if / else if / else의 핵심은 ★수직선★ 
+    // 사용자가 10이하의 값을 넣으면  "숫자가 너무 작습니다"라는 메시지 나오도록
+
+    //  const strNum = prompt('숫자를 입력하세요.','');
+    //  const num = Number(strNum);
+
+    //  만약에 숫자가 10(T)이라면 이걸 실행하고
+    // if (num <= 10 ) {alert('숫자가 너무 작습니다.'); }
+
+    // 그렇지 않으면(F) 아래처럼 실행하고 / else if 는 두번 써도 된다
+    // else if((10<num) && (num<20)){ alert('숫자가 정상입니다.');}
+   
+    // 그래도 아니라면(F) 아래처럼 실행해~!
+    // else { alert('숫자가 너무 큽니다.');}
+
+    // 어획량 1000t이하는 기름값의 20%지원, 1000t초과는 기름값의 15%지원
+    
+    // const weight =1001;
+    // if (weight <= 1000 ){console.log("기름값의 20% 지원됩니다.");}
+    // else if (weight > 1000){console.log("기름값 15% 지원됩니다.");}
+    // else {}
+    // 위의 else는 dead area이다.
+    //console.log("끝");
+
+    // 10세 미만 백신 1회 접종, 10~50세이하는 백신 2회 접종, 50세 초과는 백신3회 접종
+
+    // const age = 27;
+
+    // if (age < 10){console.log("백신을 1회 접종 받아야합니다.");}
+    // else if( (10 <= age) && ( 50>= age)){console.log("백신을 2회 맞으시오");}
+    // else{console.log("3회 접종하시오");}
+    
+
+    //  1.숫자를 입력받아 짝수인지 홀수인지 판단하는 코드를 만들어보세용 
+
+        // const input = prompt('숫자를 입력해주세요.','');
+        // const num = Number(input);
+
+        // if( 0 === (num%2))
+        // { alert(num + '은 짝수입니다.');}
+
+        // else
+        // {alert( num + '은 홀수입니다.');}
+
+
+        // // 입력 prompt로 숫자를 하나 받는다.
+        // const input = prompt('숫자를 입력해주세요.','');
+        // const num = Number(input);
+        // let message;
+
+        // // 처리 (처리는 if문 출력은 alert) 짝수냐 아니냐로 판단한다.  
+        // if( 0 === (num%2))
+        // {
+        //     message = num +"은 짝수입니다"
+        // }
+
+        // else
+        // {
+        //    message = num + "은 홀수입니다."
+        // }
+
+        // // 출력
+        //  alert(message);
+
+      
+
+    // 2.세개의 숫자를 입력받아 가장 큰수를 찾는 코드 (2,35,9가 입력되면 35를 찾아야한다.)
+
+    // // 입력
+    // const num1 = prompt('숫자를 입력하세요1.','');
+    // const num2 = prompt('숫자를 입력하세요2.','');
+    // const num3 = prompt('숫자를 입력하세요3.','');
+
+    // let max;
+
+    // //처리
+    // if ( (num1 > num2) && (num1 > num3)) {max = num1;}
+    // else if ( (num2 > num1) && (num2 > num3)) {max = num2;}
+    // else {max=num3;}
+  
+    // // 출력
+    // alert("가장 큰 수는" + max + " 입니다.");
+
+
+
+     // 입력
+    //  const input1 = prompt('첫번째 숫자를 입력해주세요.','');
+    //  const input2 = prompt('두번째 숫자를 입력해주세요.','');
+    //  const input3 = prompt('세번째 숫자를 입력해주세요.','');
+    //  const num1 = Number(input1);
+    //  const num2 = Number(input2);
+    //  const num3 = Number(input3);
+     
+    //  let max;
+     
+    //  //처리
+    // //  1. 두 수를 비교한다. 
+    //  if ( num1 > num2) 
+    // {  // 2. 두 수중 큰수와 남은수를 비교한다. 
+    //     if (num1> num3)  
+    //     {
+    //         max= num1;
+    //     }
+    //     else 
+    //     {
+    //         max=num3;
+    //     }
+    // }
+    // else{ 
+    //     if (num2 > num3)
+    //     { max = num2;
+    //     }
+    //     else 
+    //     {
+    //         max= num3;
+    //     }
+    // }
+    
+    // // 출력
+    // alert("가장 큰 수는" + max + " 입니다.");
+
+
+
+
+
+    // 3.세개의 숫자를 입력받아 중간수를 찾는 코드
+
+    //    //입력
+    //     let input4 = prompt('숫자를 입력해주세요4.','');
+    //     let input5 = prompt('숫자를 입력해주세요5.','');
+    //     let input6 = prompt('숫자를1 입력해주세요6.','');
+    //     const num4 = Number(input4);
+    //     const num5 = Number(input5);
+    //     const num6 = Number(input6);
+    //     let big = Math.max(num4, num5, num6);
+    //     let small = Math.min(num4, num5, num6);
+
+    //     //처리
+    //     let mid = (num4 + num5 + num6)-big - small;
+
+    //     //출력
+    //     console.log(input4, input5, input6);
+    //     alert("중간값은"+ mid+ "입니다.");
+
+
+
+    //  const input4 = prompt('네번째 숫자를 입력해주세요.','');
+    //  const input5 = prompt('다섯번째 숫자를 입력해주세요.','');
+    //  const input6 = prompt('여섯번째 숫자를 입력해주세요.','');
+    //  const num4 = Number(input4);
+    //  const num5 = Number(input5);
+    //  const num6 = Number(input6);
+     
+    //  let mid;
+
+
+    const input = prompt('나이를 입력하세요.','');
+    const age = Number(input)
+
+    if ( age < 10){alert( '백신 1회 접종' );}
+
+    else if ( (age >= 10) &&  (age <=50)) {alert ('백신 2회 접종');}
+    
+    else { alert('백신 3회 접종');}
+    
+
+</script>
+</body>
+</html>

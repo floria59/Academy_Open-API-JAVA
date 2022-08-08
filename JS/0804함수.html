@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+
+        //익명함수
+        // const add = function(val1, val2)
+        // {
+        //     let result = val1 + val2;
+        //     return result;
+        // }
+        // { } 영역과 { } 영역이 아닌곳은 내용이 분리되어있어
+        // { } 영역은 독립적으로 보장받기에 실행된다. 그렇기에 
+        // result 똑같은 변수명이 {} 안에 있든 밖에 있는 오류가 안나고 실행되는것임.
+        // {}의 result는 add의 result 이고, {}밖에 있는 result는 script의 result임
+
+        // let result;
+        // result = add(10,20);
+
+        // console.log(result);
+
+        //--------------------------------------------------------------------------
+        // 2단을 찍으면 2단이 나오고 3단을 찍으면 3단이 나오도록 만들어보시오.
+
+        // let input = prompt('숫자를 입력하세요.','');
+        // const num =Number(input);
+        // let mul = 1;
+
+        // for ( i = 0; i < 9; i++)
+        // {
+        //     console.log ( num + 'x' + mul + '=' + (num * mul));
+        //     mul++;
+        // }
+
+        // const multiple = function(dan)
+        // {
+        //     let mul = 1;
+        //     for ( let i = 0; i < 9; i++)
+        //     {
+        //         console.log ( dan +'x'+mul +'='+ (dan*mul));
+        //         mul++;
+        //     }
+        // }
+
+        //호출 => 함수명();
+        // multiple(6);
+
+        //-------------------------------------------------------------
+        // 사용자에게 숫자를 하나 입력받는다. 
+        // 1~ 숫자까지 더하는 코드를 작성
+        // ex ) 5, 1+2+3+4+5
+        // 단, 1 +...+n 더하는 기능은 함수로 구현하시오.
+
+        // const plus = function(n)
+        // {
+        //     let sum = 0;
+        //     for ( let i = 0; i <= n; i++)
+        //     {
+        //         sum = sum+ i;
+        //     }
+        //     console.log(sum);
+        // }
+
+        // let input = prompt (' 숫자를 입력하세요. ', '');
+        // const num = Number(input);
+        // plus(num);
+        
+        // // 강사님 답안
+        // const plus = function(n)
+        // {
+        //     let sum = 1;
+        //     let inc = 2;
+
+        //     for ( let i = 0; (i < n-1); i++)
+        //     {
+        //         sum = sum + inc;
+        //         inc++;
+        //     }
+        //     return sum;
+        // }
+
+        // // 숫자를 하나 입력받는다. 
+        // // let input = prompt (' 숫자를 입력하세요. ', '');
+        // // const num = Number(input);
+
+        // // 입력받은 숫자를 호출한다.
+        // let res = plus(4);
+        // console.log(res);
+
+
+        // const plus = function(n)
+        // {
+        //     let sum = 1;
+        //     let inc = 2;
+
+        //     for ( let i = 0; (i < n-1); i++)
+        //     {
+        //         sum = sum + inc;
+        //         console.log( 'i =' + i + ', total =' + sum);
+
+        //         if(sum > 2000)
+        //         { // 하단 리턴은 2000이상이면 그 리턴값을 종료하라는 뜻임.
+        //             return sum;
+        //         }
+        //         inc++;
+        //     }
+        // }
+
+        // let res = plus(2000);
+        // console.log('return value = ' + res);
+
+
+        //---------------------------------------------------------------------------
+        // 세개의 숫자를 더하는 함수를 만들어보세요
+
+      
+        const add = function(val1, val2)
+        {
+            return val1 + val2;
+        }
+        
+        const add3 = function(val1, val2, val3)
+        {
+            //let a1 = add(val1, val2);
+            //let a2 = add(a1, val3)
+
+            // let a2 = aad(add(val1,val2),val3); // 위 두줄을 한줄로 요약가능
+
+            // return a2;
+
+            // let result = add(a1, val3); // 함수가 함수를 호출할 수 있다.
+            // return result;
+            
+            // 종합적으로 아래 한줄로 요약할 수 있음
+            return add(add(val1, val2), val3);
+
+        }
+
+        // let result = add3(1, 4, 5);
+        // console.log(result);
+
+        console.log(add3(1,2,3));
+
+    </script>
+
+
+</body>
+</html>

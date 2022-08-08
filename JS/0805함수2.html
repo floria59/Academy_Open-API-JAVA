@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamsu2</title>
+</head>
+<body>
+    <script>
+       
+    //    노트에 메모리구조는 어떻게 되는지 그려보자! 
+    //    const func = function()
+    //     {
+    //         console.log("func()");
+
+    //     }
+    //     const func_clone = func;
+
+    //     func_clone();
+
+    //     // function func1() 이 방법은 es5방법이다. 상단의 es6 코드로 짜는것을 추천한다. 
+
+    //     function func1()
+    //     {
+    //        const ff = function()
+    //          {
+    //             console.log("abc");
+    //          }
+
+    //          ff();
+    //      }
+
+    //----------------------------------------------------------------
+    // 가변 파라미터
+       /*
+       const add1 = function(val1, val2);
+       {
+
+       }
+
+       const add2 = function(val1, val2, val3);
+       {
+
+       }
+
+       add1(1,2);
+       add2(1,3,5);
+       */
+    // 함수를 이렇게 늘어나는 개수마다 만들어야할까? 이럴때 하단의 방법을 사용한다. 
+
+    //    const add = function(...val)
+    //    {
+    //     console.log(val);
+    //    }
+
+    //    add(1,2);
+    //    add(1,2,5);
+    //    add(1,2,5,6);
+
+    // add( )의 값을 더해보시오.----------------------------------------------
+
+    // const add = function(...val)
+    //    {
+    //       total = 0;
+
+    //     //   for ( let value of val)
+    //     //   {
+    //     //     total = total + value;
+    //     //   } 이렇게 해도 되고, 아래처럼 만들어도 된다. 
+
+    //       for ( let i = 0; i < val.length; i++ )
+    //       {
+    //         total = total + val[i];
+    //       }
+    //       return total;
+    //    }
+
+    //    console.log(add(1,2,5,6));
+
+    //-------------------------------------------------------------------
+    // 최소값을 찾아보시오. // ★ function( )에 들어간게 중요한게 아니다. 
+
+//     const getmin = function(...ar)
+//     {
+//         let min = ar[0]; //min은 최소값이라고 판단되는 값
+
+//         for(let i = 1; i < ar.length; i++) 
+//         {
+//              if(min > ar[i])
+//              {
+//                 min = ar[i];
+//              }
+//         }
+//         return min;
+//     }
+
+//    // 가변 파라미터는 
+//    // 1. 동일한 로직으로 수행되는 함수 
+//    // 2. 파라미터가 여러개가 들어가는 경우 일때 사용한다. 
+//    console.log(getmin(11,20,5,6,324,44,32));
+
+   //------------------------------------------------------------------------
+   // 전개연산자 
+   // 1. 배열을 파라미터로 넣어주는 경우
+   // 2. 배열을 순서대로 모두 넣어야 할때 사용한다.
+
+    //   const func = function( a, b, c)
+    //   {
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    //   }
+
+    //   const ar = [ 1,5,'abc'];
+    //   func(...ar);
+
+
+    //-------------------------------------------------------------------------
+    // 디폴트 파라미터
+
+    // 시급과 일한시간을 입력하면 일당을 리턴하는 함수를 만들어 보시오.
+
+    //   const getpay = function (time = 8, wage = 9620) // 울회사는 8시간에 9620원받는 사람이 많아
+    //   {
+    //      return time*wage
+    //   }
+
+    //   console.log(getpay()); // 이렇게 쓰면 정보가 안보임 그래서 보기에는 깔끔해 근데 누군가가 코드를 보며 이거 정보 어디갔어?라고 생각될 수 있음 이러면 안됨.  
+    //   console.log(getpay());
+    //   console.log(getpay());
+    //   console.log(getpay());
+    //   console.log(getpay());
+    //   console.log(getpay(5, 12050)); // 그렇지 않은 사람 데이터를 이렇게 넣으면 디폴트값대신 이대로 계산해준다. 
+    //   console.log(getpay(5, 20000));
+      
+    //--------------------------------------------------------------------------------
+    // 콜백 함수.
+
+    //   const printmessage = function(n)
+    //   {
+    //     console.log(`${n}번째 호출`);
+    //   }
+
+    //   // 호출은 되었으나 printmessage() 이와같은 호출자가 눈에 안보인다. 
+
+    //   const callbackfunction = function(callbackproc)
+    //   {
+    //     for (let i = 0; i < 3; i++)
+    //     {
+    //         callbackproc(i);
+
+    //     }
+    //   }
+
+    //   callbackfunction(printmessage);
+
+      //------------------------------------------------
+      // 배열의 forEach() 함수
+
+    //    const callbackproc = function(value, index, array)
+    //    {
+    //      console.log(`value = ${value}, index = ${index}`);
+
+    //    }
+
+    //    const num = [11,22,33,44,55];
+
+    //    num.forEach(callbackproc);
+
+
+       const num = [11,22,33,44,55];
+
+       num.forEach(function(value, index, array)
+                   {
+                     console.log(`value = ${value}, index = ${index}`);
+
+                   }
+                   ) ;
+
+ 
+    //----------------------------------------------
+    // 증말,, 어렵다,, 임시객체를 활용한 방법
+
+    // const aa =function()
+    // {
+    //     console.log("aaaaa");
+    // }
+
+    // (function() 
+    // {
+    //     console.log("aaaaa");
+    // }) (); // 여기 뒤에있는 ()는 const aa와 동일하다고 볼 수 있다. 
+
+
+ 
+
+
+
+
+    
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

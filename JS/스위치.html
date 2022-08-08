@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치문</title>
+</head>
+<body>
+    <script>
+        //  스위치문의 좋은점은 읽기편하다는것이다~
+
+    const input = prompt('숫자를 입력하세요.','');
+    const num =Number(input);
+
+    const remain = num % 2;
+    let message;
+
+    switch(remain) // remain 값은 정수이거나 문자열 두개중에 하나여야한다.
+    { 
+        case 0: 
+        message = "짝수입니다.";
+
+        break;
+
+        case 1:
+            message = " 홀수입니다.";
+
+        break;
+
+        //    case 0
+        //    case 1
+        //    message = " 숫자입니다. ";
+        //    break;  이런식으로 사용도 가능하다.  
+
+        default :
+        message = "숫자가 아닙니다.";
+
+        break;
+
+    }
+
+    alert(message);
+
+
+
+</script>
+</body>
+</html>

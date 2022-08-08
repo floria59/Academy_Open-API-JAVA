@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강사님 코딩</title>
+    
+</head>
+<body>
+    <script>
+        // 1. 문자열의 +
+        let str1 = "Hello";
+        let str2 = "World";
+
+        console.log(str1);
+        console.log(str2);
+
+        // 2. 문자열의 추출.
+        console.log(str1[0]);
+        console.log(str1[1]);
+        console.log("이순신장군님"[2]);
+
+        // 3. 문자열의 길이
+        console.log(str2.length);
+        console.log("이순신장군님".length);
+
+        // 4. 문자열과 다른 값들을 같이 표현
+        let val1 = 10; // number
+        let val2 = 30; // number
+
+        console.log(val1 + val2);
+        console.log(val1 + str1);
+        console.log(str2 + val1);
+
+        // 5. 템플릿 문자열
+        console.log('val1의 값은' + val1 + '이고 val2 의값은 ' + val2 + '입니다.');
+        console.log(`val1의 값은 ${val1}이고 val2의 값은 ${val2}입니다.`);
+
+        // 6. 문자열의 입력받기.
+        // const input = prompt('Email을 입력하세요', 
+        //                      'example@exam.com');
+        // console.log(input);
+
+        // 7. yes/no 입력받기
+        // const yesno = confirm('저장하시겠습니까?');
+        // console.log(yesno);
+
+        // 8. 문자를 숫자로 변환.
+        // "200"--> 200
+        let strval = '3.145';
+        let strnum = Number(strval);
+        console.log(`strnum의 자료형은 ${typeof(strnum)}입니다.`);
+
+        // 9. 숫자를 문자로 바꾸기
+        let strval1 = String(val1);
+        //let strval1 = val1 + '';  // 좋은방법이 아닙니다.
+        console.log(`strval1의 자료형은 ${typeof(strval1)}이고 값은 ${strval1}이다.`);
+
+    </script>
+    
+</body>
+</html>
+
+

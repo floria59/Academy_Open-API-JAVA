@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디버거에 대해 알아보자</title>
+</head>
+<body>
+    <script>
+
+        /* let total = 0;
+
+        console.log("1");
+        console.log("2");
+
+        for(let i = 0; i < 10; i++)
+        {
+            total += i;
+            console.log(i);
+            console.log(total);
+        }
+
+        디버깅 : 간단하게 설명하면 값이 어떻게 돌아가는지 보고싶을때 내가 실행제어권을 갖고 있으니 야! 메모리에 뭐있나 보게 좀 멈춰봐! 하는것 
+        특징  1 break point (중단점), 2 watch (감시) 3 call stack (호출 스택)
+
+        const dummy = function()
+        {
+            console.log("10");
+            console.log("2");
+        }
+
+        const func = function()
+        {
+            let total = 0;
+
+            dummy();
+
+            for(let i = 0; i < 10; i++)
+            {
+                 total += i;
+                 console.log(i);
+                 console.log(total);
+            }
+
+        }
+
+        func();
+        ---------------------------------------------------------------------------------------*/ 
+        // 사용자에게 태어난 년도를 입력받고, 무슨 띠인지 판단하는 함수를 작성하세요
+        // 귀하는 xx 띠 입니다 라고 출력하는 alert 코드를 작성하세요.
+
+        /*
+        // 입력 사용자에게 태어난 연도를 입력 받는다  prompt 사용
+        let age = prompt("당신이 태어난 연도를 입력하십시오","");
+        let Nage = Number(age);
+
+
+        // 처리 무슨 띠인지 판단하는 함수 작성, 나머지 함수, case 함수로 사용
+        const remain = Nage % 12;
+        let message;
+
+        switch(remain)
+        {
+            case 0 :
+                message = "귀하는 원숭이띠 입니다."
+
+            break;
+
+
+            case 1 :
+                message = "귀하는 닭띠입니다."
+            break;
+
+            case 2 :
+                message = "귀하는 개띠입니다."
+            break;
+
+            case 3 :
+                message = "귀하는 돼지띠입니다."
+            break;
+
+            case 4 :
+                message = "귀하는 쥐띠입니다."
+            break;
+
+            case 5 :
+                message = "귀하는 소입니다."
+            break;
+
+            case 6 :
+                message = "귀하는 호랑이띠입니다."
+            break;
+
+            case 7 :
+                message = "귀하는 토끼띠입니다."
+            break;
+
+            case 8 :
+                message = "귀하는 용띠입니다."
+            break;
+
+            case 9 :
+                message = "귀하는 뱀띠입니다."
+            break;
+
+            case 10 :
+                message = "귀하는 말띠입니다."
+            break;
+
+            case 11 :
+                message = "귀하는 양띠입니다"
+            break;
+        }
+
+        // 출력 띠 말해주기 // alert 사용 해보자
+        alert(message);
+
+
+    
+    // 입력
+    const birth_year = prompt("태어난 년도를 입력하시오", "");
+
+    // 처리 - 무슨 띠인지 판단하는 함수
+     const ddi = function()
+     {
+       let ddi = 
+       [
+        "원숭이띠",
+        "닭띠",
+        "개띠",
+        "돼지띠",
+        "쥐띠",
+        "소띠",
+        "범띠",
+        "토끼띠",
+        "용띠",
+        "뱀띠",
+        "말띠",
+        "양띠"
+        ];
+       return ddi[birth_year%12]
+     }
+ 
+      // 무슨 띠인지 alert 로 출력
+
+     alert("당신의 띠는 "+ ddi() + "입니다.");
+     
+
+     // 강사님 답안
+
+     const getyearsymbol = function(birth) 
+     {
+        let getyearsymbol = '';
+        const val = birth % 12;
+
+        switch(val)
+        {
+            case 0 : yearsymbol = '원숭이'; break;
+            case 1 : yearsymbol = '닭'; break;
+            case 2 : yearsymbol = '개'; break;
+            case 3 : yearsymbol = '돼지'; break;
+            case 4 : yearsymbol = '쥐'; break;
+            case 5 : yearsymbol = '소'; break;
+            case 6 : yearsymbol = '범'; break;
+            case 7 : yearsymbol = '토끼'; break;
+            case 8 : yearsymbol = '용'; break;
+            case 9 : yearsymbol = '뱀'; break;
+            case 10 : yearsymbol = '말'; break;
+            case 11 : yearsymbol = '양'; break;
+
+            default : yearsymbol = '알수없음'; break;
+            // default 는 내가 생각지 못한 상황 
+            // else와는 달라! 전혀 내가 생각할 수 없는 상황!
+
+        }
+
+        return yearsymbol;
+
+     }
+
+     const input = prompt('출생년도 입력하세요','1980');
+     const birth = Number(input);
+
+     const sym = getyearsymbol(birth)
+
+     alert(`귀하는 ${sym} 띠 입니다.`);
+
+     */
+
+    </script>
+</body>
+</html>

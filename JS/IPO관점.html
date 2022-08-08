@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ipo관점으로 코딩을 해보자</title>
+</head>
+<body>
+    <script> 
+    //  가독성은 구조가 먼저이다. IPO에 맞추어 코딩을 만들어야함! 
+        // 40*5, 4*6
+        
+        // I
+        let a= 40;
+        let b= 5;
+        let d=4;
+        let e=6;
+
+        // P
+        let c= (a*b)+1;
+        let f= d*e;
+
+        // O 
+        console.log(c);
+        console.log(f);
+
+        // var : var라는 방식으로 메모리를 할당하겠다.
+        // let : let이라는 방식으로 메모리를 할당하겠다.
+        // const : const라는 방식으로 메모리를 할당하겠다.
+        //   :  라는 방식으로 메모리를 할당하겠다. 
+        // i : 이름
+        // var i =10 : i에 10을 대입하겠다라는 뜻임
+        var i = 10;
+        console.log(i);
+
+        let aa =10;
+        console.log(aa);
+
+        const bb=10;
+        console.log(bb);
+
+        cc=10;
+        console.log(cc);
+
+        let dd=true;
+        console.log(dd);
+
+        var ee ="abc";
+        console.log(ee);
+
+        // es6방식으로만 사용하기.
+        
+        //1.number
+        // 10+20
+
+        let value1=10;
+        let value2=20;
+
+        const result = value1+ value2
+
+        console.log(result);
+
+        // 30*6+2 를 직접 만들어보자
+
+        let value3=30;
+        let value4=6;
+        let value5=2;
+
+        let result2 = (value3*value4)+value5;
+
+        console.log(result2);
+
+        // 위의 코드를 다양한 코드로 사용하기
+
+        let value6;
+        let value7;
+        let value8;
+
+        // 하단 value6은 메모리공간 이름 즉 변수임
+        // value6이라는곳에 30을 집어넣어라라는 뜻임
+        // =을 중심으로 왼쪽에 있는것은 변수인것이고, 이를 l-value라고함 
+        // 오른쪽은 값을 뜻하는 value 임, 이를 r-value라고한다. 
+        value6=30;
+        value7=6;
+        value8=2;
+
+        // 하단 value6은 변수안에 있는 값임
+        let result3 = (value6*value7)+value8;
+        console.log(result3);
+
+        let result4= 30*6+2
+        console.log(result4);
+
+        // 반지름이 10인 원의 넓이를 구하라 (반지름*반지름*3.14)
+
+        let r=10;
+        let size=0;
+        const p=3.14;
+
+        size = r*r*p;
+
+        console.log(size);
+
+       
+    </script>
+    
+
+
+
+</body>
+</html>
