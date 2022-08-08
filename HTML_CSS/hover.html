@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:hover{
+            color: teal; 
+            background-color: yellowgreen;}
+        h1:active{color: rgb(155, 9, 223);}
+
+        input:enabled{background-color: bisque;}
+        input:disabled{background-color: darkslategray;}
+        input:focus{background-color: rgb(205, 253, 253);}
+
+        li:nth-child(2n) {background-color: blanchedalmond;}
+        li:nth-child(2n+1) {background-color: royalblue;}
+        li:first-child{ background-color: blueviolet;}
+        li:last-child {background-color: green;}
+
+        #id_hi{color: brown;}
+        .cl_hi{color: aquamarine;}
+
+
+    </style>
+
+</head>
+<body>
+    <h1>HELLO</h1>
+
+    <input type="text">
+<input type="text" disabled="disabled">
+
+<ul>
+    <li>1 th</li>
+    <li>2 th</li>
+    <li>3 th</li>
+    <li>4 th</li>
+    <li>5 th</li>
+    <li>6 th</li>
+    <li>7 th</li>
+</ul>
+
+<h2 id="id_hi" class="cl_hi">Hi</h2>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+h1{
+    font-size: 2rem;
+    color: deeppink;
+}
+
+.hello2{
+    border: 10px solid aquamarine;
+    
+    padding: 2px 5px 7px 10px;
+
+}

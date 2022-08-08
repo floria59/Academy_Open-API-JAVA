@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뚱땅뚱땅 폼만들기</title>
+</head>
+<body>
+    <H1>form태그 만들기</H1>
+    <form method="post">
+        <LABEL> ID : <input type="text" name="id"></LABEL><br>
+        <LABEL> PW : <input type="password" name="PW"></LABEL>
+        <br>
+        <br>
+        <textarea cols="30" rows="10"></textarea>
+    </form>
+<br>
+    <form method="get">
+        <label> 아이디 <input type="text" name="user_id"></label> <br>
+        <label> 패스워드 <input type="password" name="user_pw"></label><br>
+        <input type="checkbox" name="keep login" value="로그인" checked> 
+        <label for="keep login"> 로그인 유지</label> <br>
+        <input type="checkbox"> 로그인 유지
+        <br>
+        <input type="button" value="로그인"> 
+
+    </form>
+    <br><br><br>
+
+    <h4>사용자정보</h4>
+    <form method="post">
+        <label for="site"> 사용 포탈사이트</label><br>
+        <select name="use_site" id="site">
+            <option value="google">google</option>
+            <option value="naver">naver</option>
+            <option value="daum">daum</option>
+        </select> <br>
+        <label>생일<br><input type="date" name="bd" value="2022-07-11"></label><br>
+        <label>배경색상<br><input type="color" name="color" value="#fa3650"></label><br>
+        <label>이메일주소<br>
+        <input type="email" name="email" placeholder="abc@naver.com"></label><br>
+        <label>전화<br>
+        <input type="tel" name="phone" placeholder="010-0000-0000"></label><br>
+        <label>홈페이지<br>
+        <input type="url" name="page" placeholder="www.naver.com"></label><br>
+        <input type="submit"value="저장">
+     <br><br>
+    </form>
+</body>
+</html>
