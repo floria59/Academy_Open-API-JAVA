@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+
+.main_title {
+    border-top: 2px solid gray;
+    padding-top: 10px;
+    border-bottom: 2px solid gray; 
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+}
+
+    /* grid는 수평 또는 수직으로 단을 바꿔주는 기능/ 동시에가능한건 플렉스태그임 */
+.main_contents{ 
+    display: grid; 
+    grid-template-columns: 200px 1fr;
+    height: 100%;
+}
+
+.local_nav{
+    border-right: 2px solid gray;
+    height: 100%;
+}
+
+.local_info{
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.table{
+    text-align: center;
+    
+}
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls_score {
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>학생 성적</h1>
+    <hr>
+    <table border="1" class="cls_score">
+        <tr>
+            <th>구분</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr>
+            <td>1학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>74</td>
+        </tr>
+        <tr>
+            <td>1학년2학기</td>
+            <td>84</td>
+            <td>94</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>2학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>88</td>
+        </tr>        
+        <tr>
+            <td>2학년2학기</td>
+            <td>82</td>
+            <td>86</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>3학년1학기</td>
+            <td>92</td>
+            <td>80</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>3학년2학기</td>
+            <td>70</td>
+            <td>80</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+    <script>    
+        const calcScore = function(ar)
+        {
+            let total = 0;
+            let resAr = []; // 합, 평균
+
+            for (let i = 0; i < ar.length; i++)
+            {
+                total = total + ar[i];
+            }
+            
+            resAr[0] = total;
+            resAr[1] = total / ar.length;
+
+            return resAr;
+        }
+
+
+        //[국어, 영어, 수학] * 6  구조로 배열을 만든다.
+
+        const score = [ [80, 90, 74],
+                        [84, 94, 80],
+                        [80, 90, 88] ,
+                        [82, 86, 90] ,
+                        [92, 80, 80] , 
+                        [70, 80, 88]];
+        
+        
+        let kor_sum = 0;
+        let kor_avg = 0;
+               
+        for (let i = 0; i < score.length; i++)
+        {
+            kor_sum = kor_sum + score[i][0];
+                
+        }
+
+        kor_avg = kor_sum / score.length;
+        
+
+        let eng_sum = 0;
+        let eng_avg = 0;
+               
+        for (let i = 0; i < score.length; i++)
+        {
+            eng_sum = eng_sum + score[i][1];
+                
+        }
+
+        eng_avg = eng_sum / score.length;
+        
+        
+        let mth_sum = 0;
+        let mth_avg = 0;
+               
+        for (let i = 0; i < score.length; i++)
+        {
+            mth_sum = mth_sum + score[i][2];
+                
+        }
+
+        mth_avg = mth_sum / score.length;
+
+  
+
+        let outStr = '';
+        outStr += '<ul>';
+        outStr += '<li>국어총점 : ' + kor_sum + '점, 평균 : '  + kor_avg.toFixed(2) + '점</li>';
+        outStr += '<li>영어총점 : ' + eng_sum + '점, 평균 : '  + eng_avg.toFixed(2) + '점</li>';
+        outStr += '<li>수학총점 : ' + mth_sum + '점, 평균 : '  + mth_avg.toFixed(2) + '점</li>';
+        outStr += '</ul>';
+
+        document.body.innerHTML += outStr;
+
+        let res = [];
+        // 1학년 1학기 성적
+        sum = score[0][0] + score[0][1] + score[0][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        // 1학년 2학기 성적
+        sum = score[1][0] + score[1][1] + score[1][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        // 2학년 1학기 성적
+        sum = score[2][0] + score[2][1] + score[2][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        // 2학년 2학기 성적
+        sum = score[3][0] + score[3][1] + score[3][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        // 3학년 1학기 성적
+        sum = score[4][0] + score[4][1] + score[4][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        // 3학년 2학기 성적
+        sum = score[5][0] + score[5][1] + score[5][2];
+        avg = sum / 3;
+        res.push(sum);
+        res.push(avg.toFixed(2));
+
+        
+        outStr = '';
+        outStr += '<ul>';
+        outStr += `<li>1학년 1학기 총점 : ${res[0]}, 평균 : ${res[1]}점</li>`;
+        outStr += `<li>1학년 2학기 총점 : ${res[2]}, 평균 : ${res[3]}점</li>`;
+        outStr += `<li>2학년 1학기 총점 : ${res[4]}, 평균 : ${res[5]}점</li>`;
+        outStr += `<li>2학년 2학기 총점 : ${res[6]}, 평균 : ${res[7]}점</li>`;
+        outStr += `<li>3학년 1학기 총점 : ${res[8]}, 평균 : ${res[9]}점</li>`;
+        outStr += `<li>3학년 2학기 총점 : ${res[10]}, 평균 : ${res[11]}점</li>`;
+        outStr += '</ul>';
+        document.body.innerHTML += outStr;
+    
+    </script>
+
+</body>
+</html>

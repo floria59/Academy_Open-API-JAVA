@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 성적</title>
+
+    <style>
+        td{text-align: center;};
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1> 학생 성적 </h1>
+    <hr>
+    <table border="1">
+        <tr> 
+            <th>구분</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>    
+        </tr>
+        <tr>
+            <td>1학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>74</td>
+        </tr>
+        <tr>
+            <td>1학년2학기</td>
+            <td>84</td>
+            <td>94</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>2학년1학기</td>
+            <td>80</td>
+            <td>90</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>2학년2학기</td>
+            <td>82</td>
+            <td>86</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>3학년1학기</td>
+            <td>92</td>
+            <td>80</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>3학년2학기</td>
+            <td>70</td>
+            <td>80</td>
+            <td>88</td>
+        </tr>
+    </table>
+    <br>
+    
+
+
+    <script>
+        const score = [ 
+                    [80,90,74] , 
+                    [84,94,80] ,
+                    [80,90,88] ,
+                    [82,86,90] ,
+                    [92,80,80] ,
+                    [70,80,88] 
+                ];
+       
+        let hd1_1 = (score[0][0] + score[0][1] + score[0][2]); 
+        let hd1_2 = (score[1][0] + score[1][1] + score[1][2]);
+        let hd2_1 = (score[2][0] + score[2][1] + score[2][2]); 
+        let hd2_2 = (score[3][0] + score[3][1] + score[3][2]); 
+        let hd3_1 = (score[4][0] + score[4][1] + score[4][2]); 
+        let hd3_2 = (score[5][0] + score[5][1] + score[5][2]); 
+
+        let hg1_1 = (score[0][0] + score[0][1] + score[0][2]) / score[0].length;
+        let hg1_2 = (score[1][0] + score[1][1] + score[1][2]) / score[1].length;
+        let hg2_1 = (score[2][0] + score[2][1] + score[2][2]) / score[2].length;
+        let hg2_2 = (score[3][0] + score[3][1] + score[3][2]) / score[3].length;
+        let hg3_1 = (score[4][0] + score[4][1] + score[4][2]) / score[4].length;
+        let hg3_2 = (score[5][0] + score[5][1] + score[5][2]) / score[5].length;
+
+        let add_kor = (score[0][0]+score[1][0]+score[2][0]+score[3][0]+score[4][0]+score[5][0]);
+        let add_eng = (score[0][1]+score[1][1]+score[2][1]+score[3][1]+score[4][1]+score[5][1]);
+        let add_mat = (score[0][2]+score[1][2]+score[2][2]+score[3][2]+score[4][2]+score[5][2]);
+
+        let avg_kor = (score[0][0]+score[1][0]+score[2][0]+score[3][0]+score[4][0]+score[5][0]) / 6;
+        let avg_eng = (score[0][1]+score[1][1]+score[2][1]+score[3][1]+score[4][1]+score[5][1]) / 6;
+        let avg_mat = (score[0][2]+score[1][2]+score[2][2]+score[3][2]+score[4][2]+score[5][2]) / 6;
+
+
+
+        document.body.innerHTML +=('1학년 1학기 총점 :' + hd1_1 + '점, 평균 :' + hg1_1 +'점'); 
+        document.body.innerHTML +=('1학년 2학기 총점 :' + hd1_2 + '점, 평균 :' + hg1_2 +'점'); 
+        document.body.innerHTML +=('2학년 1학기 총점 :' + hd2_1 + '점, 평균 :' + hg2_1 +'점'); 
+        document.body.innerHTML +=('2학년 2학기 총점 :' + hd2_2 + '점, 평균 :' + hg2_2 +'점'); 
+        document.body.innerHTML +=('3학년 1학기 총점 :' + hd3_1 + '점, 평균 :' + hg3_1 +'점'); 
+        document.body.innerHTML +=('3학년 2학기 총점 :' + hd3_2 + '점, 평균 :' + hg3_2 +'점'); 
+
+        document.body.innerHTML +=('국어 총점 :' + add_kor + '점, 평균 :' + avg_kor +'점'); 
+        document.body.innerHTML +=('영어 총점 :' + add_eng + '점, 평균 :' + avg_eng +'점'); 
+        document.body.innerHTML +=('수학 총점 :' + add_mat + '점, 평균 :' + avg_mat +'점');
+        
+        
+
+    </script>
+
+
+    
+
+</body>
+</html>
