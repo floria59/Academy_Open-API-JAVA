@@ -84,6 +84,31 @@
 
         // => 화살표함수를 쓰면, 메소드 함수가 적용 안된다. =>를 쓴순간 this를 사용할수없음.
 
+        // 10을 전역영역에 넣어보자.
+
+        (function(){
+            const b = 10;
+            const a = new Number(10);
+            
+            console.log(typeof(a));
+            console.log(typeof(b));
+        })();
+
+        // 기본 자료형을 객체형으로 변환해보자.
+
+        (function(){
+
+            const str = '안녕하세요';
+            console.log(typeof(str));
+
+            const len = str.length; // str은 때려죽어도 객체라는 뜻 / heap에다가 알아서 할당함. 
+            console.log(len);
+            console.log(typeof(len));
+        
+        })();
+
+
+
 
 
 
