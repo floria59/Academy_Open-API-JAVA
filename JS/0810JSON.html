@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이슨</title>
+
+    <!-- lodash 라이브러리와 lotto.js를 불러온다. -->
+    <script src ="./0810lotto.js"></script>
+    <script src ="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <!-- 웹 폰트 데이터를 불러오자! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- css를 불러와서 폰트를 적용하자! -->
+    <link rel = "stylesheet" href="./0810style.css">
+
+</head>
+<body>
+    <script>
+
+        // (function(){
+
+        //     {
+        //         name : "은솔", // 제이슨에서 사용하는 문자열은 "" 이걸 사용.
+        //         age : 200,
+        //         married : false,
+        //     }
+
+        // })();
+
+        /*
+
+        (function(){
+
+            const student = [
+                { 
+                    name : '은솔',
+                    age : 200,
+                    married : false
+                },
+                {
+                    name : '이순신',
+                    age : 43,
+                    married : true
+                }
+
+            ];
+
+            const jsoninfo = JSON.stringify(student);  // 송신자
+
+            //console.log(JSON.parse(jsoninfo)); // 객체화된것을 확인가능
+
+            const jsonobj = JSON.parse(jsoninfo); // 수신자
+
+            console.log(jsonobj[0].name); // 수신자
+            console.log(jsonobj[0].age); // 수신자
+
+         
+         })();
+
+         
+
+         (function(){
+            console.log(Math.max(1,3,2));
+
+            const Array = [1, 2, 3];
+            console.log(...Array);
+
+         })();
+
+         // 랜덤값 , 0 이상 1 미만의 부동소숫점들이 랜덤하게 나옴.
+
+         (function(){
+
+            for ( let i = 0; i < 10; i++)
+            {
+               console.log(Math.random());
+            }
+        
+         })();
+
+         // 0~10 사이의 숫자들을 랜덤하게 나오고싶게 하고 싶다면 x10 하면 된다.
+         
+         (function(){
+
+             for ( let i = 0; i < 10; i++)
+             {
+                console.log(Math.random() * 10);
+             }
+             
+        })(); 
+
+        // floor를 사용해보자.
+
+        (function(){
+
+            let t = 0;
+            let k = 0;
+
+             for ( let i = 0; i < 10; i++)
+             {
+                // 0.0000 ~ 9.9999
+                t = Math.random() * 10;
+
+                // 0~9
+                k = Math.floor(t) +1 ;
+                console.log(k);
+             }
+             
+        })(); 
+        */
+
+        // 로또 1 ~ 45 사이의 랜덤값 6개 단, 겹치면 꽝!! 만들어보시오
+
+        // (function ()
+        // {  
+        //     // 로또 배열만들기
+        //      let lotto = []; 
+        
+        //      for(let i = 0; i < 6; i++)
+        //      {  
+        //         // 1~45까지 나와라! 
+        //          let num = Math.floor(Math.random() * 45) + 1;
+            
+        //          for(let k in lotto)
+        //          {
+        //              if(num == lotto[k])
+        //              { 
+        //                  num = Math.floor(Math.random() * 45) + 1;
+        //              }
+        //          }
+        //          lotto.push(num);
+        //      }
+             
+        //      // 로또번호 출력하기 
+        //      console.log('로또 번호 : ' + lotto);
+
+        // })();
+             
+
+        // 강사님 풀이 --------------------------------------------
+
+        (function(){
+            const getLottoNumber = function()
+            {
+                const ranNumber = [];
+
+                // ranNumber.length가 6이 될 때까지 계속
+                let num = 0;
+                while(ranNumber.length < 6)
+                {
+                    // ranNumber의 개수가 6개가 될 때까지 계속
+                    // 1 ~ 45까지의 랜덤번호를 하나 만들어 낸다. 
+                    num = Math.floor(Math.random() * 45) + 1;
+
+                    if (-1 === ranNumber.indexOf(num))
+                    {
+                        ranNumber.push(num);
+                    }
+
+                    // 랜덤번호가 ranNumber배열에 
+                    // 존재하지 하지 않는다면 ranNumber에 넣는다.
+                    // 만약 랜덤번호가 존재한다면 랜덤번호를 다시 만든다.   
+                }
+                return ranNumber;
+            }
+            for (let i = 0; i < 5; i++)
+            {
+                ranLine = getLottoNumber();
+                ranLine = _.sortBy(ranLine); 
+                // sortby를 쓰면 <script src ="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js">기능이 호출된다. 오름차순으로 정렬
+
+                str = ranLine.join(',');
+
+                document.body.innerHTML += `<h1>${str}</h1>`
+            }
+            
+
+        })();
+
+        // 폰트
+        // 1 믿을만한 서버
+        // 2 라이센스문제 해결
+        // 3 과도한 웹폰트는 자제하자.
+           
+     
+
+    </script>
+    
+</body>
+</html>
