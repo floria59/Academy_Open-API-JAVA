@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체지향을 공부해보자</title>
+</head>
+<body>
+    <script>
+        /*
+        (function(){
+            //new 연산자 / new에 객체형 (data - type)을 집어넣으면 heap에 넣음. 레퍼런스 값을 리턴함.  
+            //new 는 date를 생성 이처럼 새로운 연산자를 만들 수 있다! 값을 받아서 결과만 뱉으면 됨(마치 함수같은 것)
+            
+            const today = new Date(); // date (초기화할 값 넣어줘야해) 
+
+            console.log(today.getMonth()); // 7 : 8월을 의미 / 0이 1월
+            console.log(today.getDay()); // 3 : 수요일을 의미 / 일요일부터 0 
+
+        })();
+
+        /*
+        const today = new Date();
+        Date 라는 타입의 객체를 힙에 생성하고 그 생성된 객체의 레퍼런스 값을 리턴해주는구나
+        생성된 객체는 기본생성자로 초기화 되는구나를 알 수 있다.
+        기본 생성자 : 객체를 초기화하는 매소드 개발자가 별도로 파라미터를 주지 않음. 
+        개발자가 별도로 파라미터를 줬을때는 기본생성자가 실행되지 않음 즉 다른 별도의 생성자가 실행됨*/
+          
+        //------------------------------------------------------
+        // prototype에 대해 배워보자
+        // 배열에 필요한 프로토타입과 펑션에 필요한 프로토타입은 거의 다르다고 볼 수 있다. 
+
+        // (function(){
+
+        //     Number.prototype.zegop = function(){
+
+        //         let val = this.valueOf();
+
+        //         return val * val;
+        //     }
+
+        //     const a = 30;
+
+        //     console.log(a.zegop()); // 결과는 900
+
+        //     let b = 20;
+        //     console.log(b.zegop()); // 결과는 400
+
+        //     const c = new Number(5);
+        //     console.log(c.zegop());  // 결과는 25
+
+
+        // })();
+
+        // 예제 -------------------------------------------------------------
+        (function(){
+
+            let a = [11, 22, 33, 44, 55];
+
+            //console.log(a.hasData(11)); // 이렇게 넣으면 오류남 왜? hasdata가 없으니깐! 이걸 이제 펑션에 넣어보자
+            Array.prototype.hasData = function(value)
+            {
+                
+                if ( -1 === this.indexOf(value))
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            console.log(a.hasData(33));
+
+            let b =[];
+
+            console.log(b.hasData(77));
+
+            //console.log(a.indexOf(11));
+            //console.log(a.indexOf(22));
+            //console.log(a.indexOf(66)); // 배열안에 없으면 -1로 나타낸다. 
+            
+        })();
+
+        // (function(){
+
+        //     let s = '동해물과 백두산이 마르고 닳도록';
+            
+        //     console.log(s.indexOf('물과'));
+        //     console.log(s.indexOf('두산'));
+        //     console.log(s.indexOf('도록'));
+        //     console.log(s.indexOf('악'));
+
+        // })();
+
+
+    </script>
+    
+</body>
+</html>
