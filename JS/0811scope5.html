@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프5</title>
+</head>
+<body>
+    <script>
+
+        // 스코프 체인
+        // f2() 에 a 가 없어? 
+        // f1() 에도 a가 없어 ?
+        // 그럼 난 전역영역으로 가서 a찾을래 ~ 
+
+    
+        let a = 0;
+
+        const f1 = function()
+        {
+            //slet a = 10;
+
+            const f2 = function()
+            {
+                //let a = 20;
+                console.log(a);
+            }
+
+            f2();
+
+        }
+
+        f1();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
