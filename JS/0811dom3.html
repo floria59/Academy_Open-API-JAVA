@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 연습문제</title>
+
+
+    <script>
+        
+
+        document.addEventListener('DOMContentLoaded', function(){
+            
+            //1. div element 2개를 가지고 온다.
+            const divElements = document.querySelectorAll('div');
+
+            //2. 각각에 element에 hello, world를 넣어준다.
+            const contents = ['Hello', 'World'];
+
+            for (let i = 0; i < divElements.length; i++)
+                divElements[i].innerHTML = `<h1>${contents[i]}</h1>`;
+            
+
+            // divElements.forEach((element, index)=>{
+            //     if (index >= contents.length)
+            //         return;
+
+            //     element.innerHTML = `<h1>${contents[index]}</h1>`;
+                
+            // });
+
+        });
+        
+
+    </script>
+
+</head>
+<body>
+
+    <div></div>      
+    <div></div>   
+
+</body>
+</html>
