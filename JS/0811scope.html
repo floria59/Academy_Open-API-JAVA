@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프</title>
+</head>
+<body>
+    <script>
+
+        // 1 . 모든 변수는 메모리에 올라간다. 
+        // global영역에 올린 변수들은 어디에서나 접근이 가능하다. 
+        // let, const , var의 차이가 없다. 
+        // 따라서 스코프는 지역영역에서 해석하는 방식을 중점적으로 학습해야한다. 
+
+        // let gvalue = [ 1, 2, 3 ];
+
+        // const f1 = function()
+        // {
+        //     console.log("f1()" + gvalue);
+        // }
+
+        // 선언조건이 달라지면 ? let -> const / 전역영역에 들어가는게 바뀔까 ? 
+        // NO ! 똑같음 전역영역에 동일하게 올라간다. ★ 전영영역은 무적이다 ! ★
+
+        // const gvalue1 = [ 1, 2, 3 ];
+        // const gvalue2 = 200;
+
+        // const f1 = function()
+        // {  // 함수호출에는 명시적과 묵시적인 호출이있는데 가급적으로 명시적으로 나타내야한다. 
+        //    // 묵시적으로 호출한다면 묵시적으로 했다는 흔적을 나타내야한다. 
+        //     console.log("f1()" + gvalue1);
+        //     console.log("f1()" + gvalue2);
+        // }
+
+        // f1();
+        // console.log(gvalue1);
+        // console.log(gvalue2);
+
+        // const > var 으로 바꿔도 변동되는사항은 없다-------------------------------
+
+        // var gvalue1 = [ 1, 2, 3 ];
+        // var gvalue2 = 200;
+
+        // const f1 = function()
+        // {  
+        //     console.log("f1()" + gvalue1);
+        //     console.log("f1()" + gvalue2);
+        // }
+
+        // f1();
+        // console.log(gvalue1);
+        // console.log(gvalue2);
+
+        //-----------------------------------------------------------
+        // 메모리에 할당하려면 함수에 넣는 방법도 있다.
+
+        // const f1 = function()
+        // {  
+        //     // lvalue의  scope는 f1()이다
+        //     let lvalue = 100;
+
+        //     console.log( 'f1()' + lvalue);
+        
+        // }
+
+        // f1();
+        // console.log(lvalue); // 함수내의 lvalue에 접근을 못해서 오류남. 
+
+
+
+    </script>
+    
+</body>
+</html>

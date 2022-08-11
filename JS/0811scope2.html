@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프2</title>
+</head>
+<body>
+    <script>
+         // 2. 지역변수와 전역변수가 이름(식별자)이 같은 경우 가까운걸 우선으로 한다. 
+
+        var gvalue1 = [ 1, 2, 3 ];
+        var gvalue = 200;
+
+        const f1 = function()
+        {  
+            let gvalue = 100;
+
+            console.log( 'f1()' + gvalue); 
+         // 이 gvalue가 도대체 누구냐! 가까운 let gvalue = 100;를 우선적으로 값을 나타낸다. 
+
+        }
+
+        f1();
+        console.log(gvalue1);
+        console.log(gvalue); //  var gvalue = 200; 의 값을 나타냄
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

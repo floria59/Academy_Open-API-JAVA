@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프3</title>
+</head>
+<body>
+    <script>
+
+        // 3 . 지역변수내에서 var와 let(const)는 차이가 있다.
+        // let , const : 블록 레벨 스코프 ( {  } 블록 안에서만 영향을 지닌다. )
+        // var : 함수 레벨 스코프
+
+        // const f1 = function()
+        // {
+        //     for ( let i = 0 ; i < 5; i++)
+        //     {
+        //         console.log(i); // 이 i 는 for문안에서만 유효한값을 지닌다. 
+        //     }
+
+        //     console.log(i); // 나는 i 가 뭔지 몰라;; error 발생
+        // }
+
+        // f1();
+
+        // i 를 모른다고 ? 그러면 i 를 밖으로 빼면 ?  -------------------------------
+
+        // const f1 = function()
+        // {
+        //     let i;
+
+        //     for ( i = 0 ; i < 5; i++)
+        //     {
+        //         console.log(i); 
+        //     }
+
+        //     console.log(i); 
+        //     // 나는 i 가 뭔지 알아 ! 
+        //     // 근데 이건 좋은 코드는 아냐 i의 용도는 루프를 돌리기 위한 루프변수이기 때문이야.
+        //     // i를 다른곳에 쓰면 안되는거지 ! 그렇기에 이건 잘못된 코드야 ~ 
+        // }
+
+        // f1();
+
+        // var로 변경하면 ?-------------------------------------------------------
+        
+        const f2 = function()
+        {
+            console.log(i); // 마치 아이가 안태어났는데 배고프다고 우유달라는것같은 느낌
+            console.log(k);
+
+            for ( var i = 0 ; i < 5; i++)
+            {
+                console.log(i); 
+            }
+
+            console.log(i); // error안남. var는 함수 안에서 모두 접근할수있음. 
+            var k = 20;
+        }
+
+        f2();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
