@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+
+    <style>
+      
+
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 우리가 하고싶은건
+            // .main_title 라는 클래스를 가진 document element object의 
+            // 글자색을 붉은 색으로 하고싶다. 
+
+            // 1. 대상을 찾는다. 
+            const h1_el = document.querySelectorAll('h1');
+
+            h1_el.forEach((element) => {
+                element.style.color ='red';
+            });
+
+            // 2. 색을 바꾼다. 
+            //h1_el.style.color = 'blue';
+
+            // const h1_el = document.querySelector('h1'); // h1이라고 써있는 첫번째 애만 반영한다. 
+            // h1_el.style.color = 'red';
+
+        });
+
+
+    </script>
+
+
+</head>
+<body>
+    <!-- js로 제목을 다른색으로 만들어보자.  -->
+    <h1 class="main_title"> hi hello my name is blarblar </h1>
+    <h1> hi hello my name is blarblar </h1>
+    
+</body>
+</html>

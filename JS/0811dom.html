@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 dom </title>
+
+    <script>
+        /*
+        //html 문서를 끝까지 읽었을때 수행되는 함수
+
+        const onLoaded = function()
+        {
+            document.body.innerHTML += '<h1>Hello</h1>'
+        }
+
+        // Event object : document
+        // message : DOMContentLoaded
+        // callback : onLoaded
+        document.addEventListener('DOMContentLoaded', onLoaded);
+        //DOMContentLoaded 이라는 이벤트가 발생이되면, onLoaded 함수를 수행해주세요라는 의미
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.innerHTML += '<h1>Hello</h1>'
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+    <!-- <script>
+        document.body.innerHTML += '<h1>Hello</h1>'
+
+        // window.location.href='http://www.naver.com' 네이버로 이동됨.
+
+        document.addEventListener
+
+    </script> -->
+    
+</body>
+</html>
