@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+</head>
+<body>
+
+    <script>
+
+        // 배열을 오름차순으로 정렬해보자.
+        let bubbleSort = function(arr)
+        {
+            let i = 0;
+            let j = 0;
+
+            // 끝까지 돌았을 때 다시 처음부터 비교하기 위한 반복문
+            for ( i = 0; i < arr.length -1; i++)
+            {
+                 // 순차적으로 비교하기 위한 반복문
+                for ( j = 0; j < ((arr.length - 1) - i); j++)
+                {
+                    // 두수를 비교하여 앞 수가 뒷 수보다 크면 
+                    if (arr[j] > arr[j+1])
+                    {
+                        // temp에 arr[j]값을 임시저장해둔다.
+                        temp = arr[j];
+
+                        //arr[j]값에 arr[j+1]값을 넣는다
+                        arr[j] = arr[j+1];
+
+                        //arr[j+1]에 저장해두었던 temp = arr[j]값을 불러온다.
+                        arr[j+1] = temp;
+                    }
+
+                }
+            }
+
+            return arr;
+
+        };
+
+        console.log(bubbleSort([4,2,3,5,1,6]));
+
+        console.log('오름차순정렬 :' + bubbleSort([4,2,3,5,1,6]));
+        document.body.innerHTML += `<h1> 오름차순정렬 : ${bubbleSort([4,2,3,5,1,6])} </h1>`
+
+
+    </script>
+</body>
+</html>
