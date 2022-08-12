@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델 복습</title>
+
+    <style>
+        .cls-div {
+            width : 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+    </style>
+
+    <script> 
+    
+    // DOMContentLoaded = dom콘텐츠를 다읽고나서 하단내용을 호출해줘! 
+    // 초기 html문서를 완전히 불러오고 분석했을때 발생
+    // 스타일 시트, 이미지, 하위 프레임의 로딩은 기다리지 않는다. 
+    document.addEventListener('DOMContentLoaded',()=>{
+
+
+        let divElements = document.querySelector('div');
+
+        const onclick = function()
+        {
+            alert("응 눌렸어!");
+        }
+
+        divElements.addEventListener('click', onclick);
+    }); 
+
+
+    </script>
+
+</head>
+<body>
+
+    <!-- <div class="cls-div" id="id-div"></div>
+
+    <script>
+
+    let divElements = document.querySelector('div');
+    console.log(divElements);
+
+    divElements = document.querySelectorAll('div');
+    console.log(divElements[0]);
+
+    divElements = document.getElementsByName('div');
+    console.log(divElements);
+
+    divElements = document.getElementsByClassName('.cls-div');
+    console.log(divElements); 
+
+    </script> -->
+
+    <!-- --------------------------------------------------------------
+    EVENT  -->
+
+    <div class="cls-div" id="id-div">
+    
+    </div>
+
+    <!-- <script>
+
+    let divElements = document.querySelector('div');
+
+    //divelement를 클릭하면 메시지 박스가 뜬다. 
+    const onclick = function()
+    {
+        alert("응 눌렸어!");
+    }
+    
+    // addeventlistener 클릭이벤트가 발생하면 onclick을 호출시켜라라는 의미 , 
+    // 여기서 onclick은 이벤트 핸들러이다.
+
+    divElements.addEventListener('click', onclick);
+
+    </script> -->
+    
+</body>
+</html>
