@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    
+    <h1 class ="title" style="color:red">hello</h1>
+    <img src="#" alt="kitten">
+
+    <script>
+
+        // getAttribute 예제
+        // 1. dom 객체를 가지고온다.
+        const h1Elem = document.querySelector('.title');
+
+        console.log(h1Elem);
+        // 2. 가지고온 객체의 속성을 알아낸다. 
+        const styleAttr = h1Elem.getAttribute('style');
+
+        console.log(styleAttr);
+
+        // --------------------------------------------------
+        // setAttribute 예제
+        // 1. dom 객체를 가지고온다.
+        const imgElem = document.querySelector('img');
+
+        // 2. 객체에 속성을 설정한다.
+        const imgsrc = 'https://placekitten.com/200/200';
+        imgElem.setAttribute('src', imgsrc);
+
+
+
+    </script>
+
+
+</body>
+</html>

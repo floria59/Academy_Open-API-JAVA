@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+
+        h1
+        { 
+            background-color: antiquewhite;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- -----------------------------------------------------
+    예제
+    img-box라는 이름의 클래스를 선택한 다음 
+    'https://placekitten.com/200/200';를 src속성으로 넣어라. 
+    forEach를 사용해서!!  또는 for문으로 -->
+    <h1>hi</h1>
+    <img class="img-box" src="">
+    <img class="img-box" src="">
+    <img class="img-box" src="">
+    <img class="img-box" src="">
+
+    <script>
+
+    // 1. dom 객체를 가지고온다.
+
+    const imgElements = document.querySelectorAll('.img-box');
+
+
+    // 2. 객체에 속성을 설정한다.
+
+    // for ( let i = 0; i < imgElements.length; i++)
+    // {
+    //     imgElements[i].setAttribute('src','https://placekitten.com/200/200');
+    // }
+
+
+    imgElements.forEach((element)=>{
+        element.setAttribute('src','https://placekitten.com/200/200');
+        //element.style.border ='1px solid red';
+    });
+
+    console.log(imgElements);
+
+    document.querySelector('h1').style.backgroundColor = 'red';
+    // document.querySelector('h1').style['background-color'] = 'blue'; 이렇게도 사용가능하다. 
+    
+    
+
+
+
+    </script>
+    
+</body>
+</html>

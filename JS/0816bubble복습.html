@@ -27,6 +27,7 @@
         // bubblesort([44,33,22,55,11]); // 배열 1개
 
         //---------------------------------------------------------
+        // 은솔 풀이
         // asc = ture : 오름차순 , asc = false : 내림차순
         // ...ar은 파라미터를 한방에 배열로 만들어준다. 가변파라미터
         // const bubblesort = function(asc, ...ar)
@@ -112,6 +113,11 @@
         // console.log(c[1]);
 
         //----------------------------------------------------------------
+        
+        // 강사님 답안
+
+        //asc = ture : 오름차순 , asc = false : 내림차순
+        // ...ar은 파라미터를 한방에 배열로 만들어준다. 가변파라미터
         (()=>{
         const bubbleSort = function(asc, ...ar)
         {
@@ -121,22 +127,25 @@
             // 한줄을 비교할때마다 스왑이 된지 파악한다.
             let swapFlag = false;
 
+            // 배열의 0번째가 넘버라면 ar값을 arr에 넣어라 
+            // 근데 이건 배열안의 배열이기에 [1, 3, 4, 2, 5]이게 0번째값이 됨
             if (typeof(ar[0]) === 'number')
             {
-                arr = ar;
+                arr = ar; // arr에 [1, 3, 4, 2, 5] 이값을 넣어라
             }
+            
             else if (Array.isArray(ar[0]))
             {
-                arr = ar[0];
+                arr = ar[0]; // arr[1, 3, 4, 2, 5] 이값의 0번째 값인 1을 넣어라
             }
             else
             {
                 return null;
             }
 
+             //arr로 버블소트를 진행
             for (let i = 0; i < arr.length - 1; i++)
             {
-                
                 for (let k = 0; k < arr.length - 1 - i; k++)
                 {
                     // 오름차순
@@ -148,10 +157,9 @@
                             arr[k] = arr[k + 1];
                             arr[k + 1] = temp;                           
 
+                            // tamp가 한번이라도 필요없는경우 swap을 올려라
                             swapFlag = true;
-
                         }
-
 
                     }
                     else // 내림차순.
@@ -162,41 +170,35 @@
                             arr[k] = arr[k + 1];
                             arr[k + 1] = temp;                           
 
-                            swapFlag = true;
-                            
+                            swapFlag = true;             
                         }
-
-
                     }
-
-
-
                 }
 
                 if (swapFlag === false)
                 {
-                    //console.log("break " + i);
+                    console.log("break " + i);
                     break;
                 }
                 else
                 {
+                    //swap 을 내려라
                     swapFlag = false;
 
                 }
-
             }
 
+            // 이 리턴은 for문의 arr값이 아님 스택에 위치하고있는 arr값을 리턴시키는것임
             return arr;
-
         }
             
-        let res = bubbleSort(true, 1, 3, 4, 2, 5);
+        let res = bubbleSort(true, [1, 3, 4, 2, 5]);
 
         console.log(res);
 
-
-
     })();
+
+
 
 
 
