@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 문제풀이</title>
+</head>
+<body>
+    email : <input type="text" id="email">
+    <h1 class="result"></h1>
+    <script>
+        const checkEmail = function(addr)
+        {
+            const addrLength = addr.length;
+            const atIndex = addr.indexOf('@');
+
+            console.log('atIndex = ' + atIndex);
+            console.log('addrLength = ' + addrLength);
+            
+            // 1. @가 존재하지 않는다면 이메일이 아니다.
+            if (atIndex === -1)
+            {
+                return false;
+            }
+
+            // 2. @를 중심으로  <-----id---->  @  <----domain---->
+            // id와 domain이 존재해야한다.
+
+            const addrParts = addr.split('@');
+
+            if (addrParts.length !== 2)
+            {
+                console.log('@가 2개 이상임');
+                return false;
+
+            }
+
+            // id의 길이 없음.
+            if (addrParts[0].length === 0)
+            {
+                console.log('아이디가 없음.');
+                return false;
+            }
+
+            // domain의 길이가 없음.
+            if (addrParts[1].length === 0)
+            {
+                console.log('도메인이 없음.');
+                return false;
+
+            }
+
+            const dotIndex = addrParts[1].lastIndexOf('.');
+
+            if ((dotIndex === -1) ||
+                (dotIndex === addrParts[1].length - 1))
+            {
+                return false;
+
+            }
+
+            return true;
+            
+        }
+
+        
+
+        const emailElem = document.querySelector('#email');
+        const resultElem = document.querySelector('.result');
+
+        emailElem.addEventListener('keyup', function(event){
+            
+            let result = checkEmail(event.currentTarget.value);
+            
+            
+            if (result === true)
+            {
+                resultElem.textContent = "정상적인 이메일입니다.";
+                
+            }
+            else
+            {
+                resultElem.textContent = "이메일이 아닙니다.";
+            }
+      
+
+        }); 
+ 
+    </script>
+
+    
+</body>
+</html>
