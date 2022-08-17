@@ -9,6 +9,7 @@
 <body>
     
     <h1 class ="title" style="color:red">hello</h1>
+    <h1 class ="title" style="color:red">hello</h1>
     <img src="#" alt="kitten">
 
     <script>
@@ -19,9 +20,14 @@
 
         console.log(h1Elem);
         // 2. 가지고온 객체의 속성을 알아낸다. 
-        const styleAttr = h1Elem.getAttribute('style');
-
+        let styleAttr = h1Elem.getAttribute('style');
+        
+        // 3. 새로운 속성을 추가한다. 
+        styleAttr += 'border:1px solid red;'
         console.log(styleAttr);
+        
+        // 4. 속성을 적용한다. 
+        h1Elem.setAttribute('style', styleAttr);
 
         // --------------------------------------------------
         // setAttribute 예제
@@ -31,6 +37,8 @@
         // 2. 객체에 속성을 설정한다.
         const imgsrc = 'https://placekitten.com/200/200';
         imgElem.setAttribute('src', imgsrc);
+
+        
 
 
 

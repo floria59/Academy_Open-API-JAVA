@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body onkeyup ="OnKeyupProc(event)">
+
+    <script>
+
+        // 방법 1 ) body에도 적용시킬 수 있음. (es5 이전 방식)
+        function OnKeyupProc(event)
+        {
+            console.log("키업 메시지가 생겼다!")
+        };
+
+        // 방법 2 ) es6 방식 / ddEventListener로 등록하여 호출
+        // const OnKeyupProc = function(event)
+        // {
+        //     console.log("키업 메시지가 생겼다!")
+        // }        
+
+        // // addEventListener 어떤 메시지가 퉁하고 날라오면 이함수를 호출해주세요하는것
+        // document.body.addEventListener('keyup', OnKeyupProc);
+
+
+        
+        // 방법 3 ) es5 시절 방식.
+        // document.body.onkeyup = function(event){
+
+        //     console.log("키업 메시지가 생겼다!")
+
+        // };
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -10,7 +10,15 @@
     <h1 id ="main-title"> </h1>
     <div id ="description"> </div>
 
+    <ul>
+        <li>돈까스</li>
+        <li>삼겹살</li>
+        <li>족발</li>
+    </ul>
+
     <script>
+        // <h1 id ="main-title"> ~~~ </h1> 여기서 ~~~에 텍스트를 넣는 법!
+        
         const h1elem = document.querySelector('#main-title');
         console.log(h1elem);
 
@@ -19,6 +27,7 @@
         const divelem = document.querySelector('#description');
         console.log(divelem);
 
+        // 입력된 문자열을 해석 하여 HTML형식으로 입력
         divelem.innerHTML = "<h3>welcome</h3>";
 
 
