@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main-canvas{
+            border: 2px solid red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 이미지를 캔버스에 출력시키는 예제 
+    Graphic- context :
+    - 그래픽을 그리기 위한 각종 셋팅값, 정보, 여러가지 기능들의 집합 -->
+
+    <canvas id="main-canvas" width="1920" height="1080"></canvas>
+
+    <script>
+        const canvasElement = document.querySelector('#main-canvas');
+        const gc = canvasElement.getContext('2d');
+
+        gc.fillStyle = "#FF0000";
+        gc.fillRect(10, 10, 180, 180);
+
+        const imageCount = 300;
+        const canvasImages = [];
+
+        for (let i = 0; i < imageCount; i++)
+        {
+            // 1. 이미지 객체를 만든다.
+            imageElement = new Image();
+
+            // 2. 이미지 객체를 설정한다.
+            imageElement.src = `../image/apple/apple_ ${i}.png`;
+
+            // 3. 이미지 객체를 canvasImages에 넣어준다.
+            canvasElement.push(imageElement);
+
+        }
+
+        imageElement.addEventListener('load', ()=>{
+            gc.drawImage(canvasImages[0], 0, 0);
+        })
+
+        // next.addEventListener('click',()=>{
+        //     gc.drawImage(canvasImages[0], 0, 0);
+        //     index++;
+
+        //     if(index === imageCount)
+        //     {
+        //         index = 0;
+        //     }
+
+
+        // })
+     
+
+    </script>
+    
+</body>
+</html>

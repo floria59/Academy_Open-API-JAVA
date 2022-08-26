@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Hello World</h1>
+    <br>
+    <br>
+    <br>
+    <button>Animate</button>
+    
+</body>
+<script>
+    const h1Elem = document.querySelector('h1');
+    const btnAni = document.querySelector('button');
+
+    let intervalID;
+    let opacityValue = 0;
+    let yValue = 0;
+
+    let isRunning = false;
+
+    const clickProc = function()
+    {
+        if (isRunning === true)
+            return;
+
+        isRunning = true;
+        opacityValue = 0;
+        intervalID = setInterval(()=>{
+
+            // 1. opacity (0 --> 1)
+            h1Elem.style.opacity = opacityValue;
+                      
+            // 값계산
+            yValue = opacityValue * -30
+            opacityValue = opacityValue + 0.05;
+
+            // 2. translateY (0 --> -30 )
+            h1Elem.style.transform = `translateY(${yValue}%)`;
+            
+            
+
+            if (opacityValue >= 1)
+            {
+                h1Elem.style.opacity = 1;
+                h1Elem.style.transform = 'translateY(-30%)';           
+                clearInterval(intervalID);
+
+                isRunning = false;
+            
+            }
+
+        }, 50);
+        
+    }
+    btnAni.addEventListener('click', clickProc);
+
+    
+
+    
+
+</script>
+</html>

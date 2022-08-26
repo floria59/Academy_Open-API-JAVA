@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1
+        {
+            font-size: 3rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <button>Fade-out</button>
+    <button>Fade-in</button>
+
+    <script>
+
+        // event handler 만들기
+        const h1Elem = document.querySelector('h1');
+        const btnFade = document.querySelectorAll('button');
+
+        let opacityValue = 0;
+        let itvID;
+
+        let isRunning = false;
+
+
+        btnFade[0].addEventListener('click', ()=> {
+
+            if (isRunning === true)
+            {
+                console.log("return!!!!");
+                return;
+            }
+
+            opacityValue = 1;
+
+
+            // setinterval 도는 동안 isrunning이 true 가 된다.
+            itvID = setInterval(()=>{
+
+                isRunning = true;
+
+                h1Elem.style.opacity = opacityValue;
+                opacityValue = opacityValue - 0.05;
+
+                if (opacityValue <= 0)
+                {
+                    clearInterval(itvID);
+                    h1Elem.style.opacity = 0;
+                    isRunning = false;
+                }
+
+
+            }, 50);
+
+
+        });
+
+
+        btnFade[1].addEventListener('click', ()=> {
+
+            
+            if (isRunning === true)
+            {
+                console.log("return!!!!");
+                return;
+            }
+            opacityValue = 0;
+
+            itvID = setInterval(()=>{
+                isRunning = true;
+
+                h1Elem.style.opacity = opacityValue;
+                opacityValue = opacityValue + 0.05;
+
+                if (opacityValue >= 1)
+                {
+                    clearInterval(itvID);
+                    h1Elem.style.opacity = 1;
+                    isRunning = false;
+                }
+
+
+            }, 50);
+
+        });
+        
+    </script>
+
+
+</body>
+</html>
