@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <script>
+
+        let a = 10;
+        let b = 'abc';
+        let c = true
+        let d = [];
+
+        console.log(typeof(a));
+        console.log(typeof(b));
+        console.log(typeof(c));
+        console.log(typeof(d));
+
+
+        // -----------------------------------------------------
+
+        let aa = [10];
+
+        let bb = aa;
+
+        bb.push(20);
+
+        console.log(aa);
+        console.log(bb);
+
+        //--------------------------------------------------------
+
+        // undefined 정의되어있지 않다, 초기화 되어있지 않다라는 뜻
+
+        let aaa = undefined;
+
+        console.log(aaa);
+        console.log(typeof(aaa));
+
+
+        // 아무것도 레퍼런스 하지 않는 값.
+        let bbb = null;
+
+        console.log(bbb);
+        console.log(typeof(bbb));
+
+        //-----------------------------------------------------
+
+        const getObjects = function(count)
+        {
+            let res = [];
+
+            if (count <=0)
+            {
+                return null;
+            }
+
+
+            for (let i = 0; i < count; i++)
+            {
+                res[i] = new Image();
+            }
+            return res;
+
+        }
+
+        //---------------------------------------------------
+
+        let arr = [11,22,33,44,55];
+
+        for (const i of arr)
+        {
+            console.log(i);
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
