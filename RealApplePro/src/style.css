@@ -1,0 +1,186 @@
+@charset 'utf-8';
+
+html {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+    letter-spacing: -0.05em;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 2rem;
+   
+    background-color:gray;
+    color: black;
+
+}
+
+.global-nav {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 44px;
+    left: 0;
+    top: 0;
+    
+}
+
+.local-nav {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 52px;
+    left: 0;
+    top : 45px;
+    
+}
+
+.global-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;    
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.local-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    height: 100%;    
+    max-width: 1000px;
+    margin: 0 auto;
+
+    border-bottom: 1px solid gray;
+
+}
+
+.local-nav-product-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+
+}
+
+.local-nav-link {
+    margin-left: 2em;
+
+
+}
+
+.product-message {
+    position: relative;
+    z-index: 9;    
+    font-size: 7rem;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+
+.description {
+    
+    position: relative;
+    font-size: 2rem;
+    z-index: 9;
+
+    line-height: 3em;
+    color:rgb(175, 175, 175);
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.description > strong {
+    float: left;
+    font-size: 4rem;
+    color: white;
+
+    margin-right: 20px;
+    
+}
+
+
+
+.section0-message
+{
+    opacity: 0;
+    font-size: 4rem;
+    font-weight: bold;
+
+    width: 100%;
+    height: 6rem;
+    top: 6em;
+
+    text-align: center;
+    
+    
+}
+
+
+.section0-canvas
+{    
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    
+}
+
+.sticky-element
+{
+    display: none;
+    position: fixed;    
+}
+
+#show-section0 .sticky-element
+{
+    display: block;
+}
+
+.local-nav-sticky .local-nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    border-bottom: 1px solid gray;
+
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+	-moz-backdrop-filter: saturate(180%) blur(15px);
+	-o-backdrop-filter: saturate(180%) blur(15px);
+	backdrop-filter: saturate(180%) blur(15px);
+
+}
+
+.local-nav-sticky .local-nav-links {
+    border: none;
+}
+
+
+.scroll-section {
+    background-color: black;
+
+}
