@@ -3,6 +3,9 @@ package sec04.exam03_compare;
 public class CompareOperatorExample2 {
 
 	public static void main(String[] args) {
+		
+		// 데이타타입이 다른 경우, 타입일치가 되고난 이후에 비교가된다.
+		
 		int v2 = 1;
 		double v3 = 1.0;
 		// 타입일치. v2가 v3변수의 double형변환된다. 그리고 비교가 이루어진다.
