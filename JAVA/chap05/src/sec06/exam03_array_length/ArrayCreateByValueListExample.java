@@ -1,4 +1,4 @@
-package sec06.exam01_array_bylist;
+package sec06.exam03_array_length;
 
 public class ArrayCreateByValueListExample {
 
@@ -7,20 +7,21 @@ public class ArrayCreateByValueListExample {
 		
 		// 참조타입 : 클래스, 배열, 열거형 , 인터페이스
 		// 기본데이타타입[] : 배열의미가 되고, 참조타입
-		int[] scores = {83, 90, 87, 90 };
+		int[] scores = {83, 90, 87 };
 		
 		System.out.println("scores[0]: " + scores[0]);
 		System.out.println("scores[1]: " + scores[1]);
 		System.out.println("scores[2]: " + scores[2]);
 		
-		System.out.println("scores[3]: " + scores[3]);
+ 
+		//  배열의 요소개수 : length 필드(속성)
 		
 		int sum = 0;
-		for(int i=0; i<4; i++) {
+		for(int i=0; i < scores.length; i++) {
 			sum += scores[i];
 		}
 		System.out.println("총합: " + sum);
-		double avg = (double)sum / 4;
+		double avg = (double) sum / 3;
 		System.out.println("평균: " + avg);
 		
 		
