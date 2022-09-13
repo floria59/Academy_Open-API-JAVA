@@ -1,8 +1,8 @@
 package sec10.exam01_static_member;
 
 public class Calculator {
-	
-	// (instance)ÀÎ½ºÅÏ½º¸â¹ö¿Í (static)Á¤Àû ¸â¹ö
+
+	//(instance)ì¸ìŠ¤í„´ìŠ¤ë©¤ë²„ì™€ static(ì •ì )ë©¤ë²„
 	
 	static double pi = 3.14159;
 	
@@ -12,10 +12,10 @@ public class Calculator {
 	
 	static int minus(int x, int y) {
 		return x - y;
-		
-	// ÀÎ½ºÅÏµå ¸â¹öÇÊµå
-		
-		
+	}
+	
+	//ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„í•„ë“œ
+	int multiply(int x, int y) {
+		return x * y;
 	}
 }
-

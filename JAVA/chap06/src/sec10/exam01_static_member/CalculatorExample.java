@@ -1,22 +1,28 @@
 package sec10.exam01_static_member;
 
 public class CalculatorExample {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
 		double result1 = 10 * 10 * Calculator.pi;
 		int result2 = Calculator.plus(10, 5);
 		int result3 = Calculator.minus(10, 5);
 		
-		System.out.println("result1 : " + result1);
-		System.out.println("result2 : " + result2);
-		System.out.println("result3 : " + result3);
+		System.out.println("result1:" + result1);
+		System.out.println("result2:" + result2);
+		System.out.println("result3:" + result3);
 		
-		
-		// Èü¿µ¿ªÀÇ ¸Ş¸ğ¸® »ı¼ºÀº °³¹ßÀÚ°¡ ÀÇµµ¸¦ °®°í ¾Æ·¡ ±¸¹®À¸·Î ÀÛ¾÷
+		//í™ì˜ì—­ì˜ ë©”ëª¨ë¦¬ ìƒì„±ì€ ê°œë°œìê°€ ì˜ë„ë¥¼ ê°–ê³  ì•„ë˜ êµ¬ë¬¸ìœ¼ë¡œ ì‘ì—…
 		Calculator myCal = new Calculator();
-		// int result4 = myCal.multiply(10, 5);
-		// System.out.println("result4 : " + result4);
+		Calculator myCal2 = new Calculator();
+		int result4 = myCal.multiply(10, 5);
+		System.out.println("result4:" + result4);
 		
-		// myCal.pi Èü¿µ¿ª¿¡¼­´Â Á¸ÀçÇÏÁö ¾Ê´Â´Ù. static¿µ¿ªÀÇ ¸Ş¸ğ¸®¸¦ Á¢±ÙÇÑ ÀÇ¹Ì
+		// myCal.pi í™ì˜ì—­ì—ì„œëŠ” ì¡´ì¬í•˜ì§€ ì•ŠëŠ”ë‹¤. staticì˜ì—­ì˜ ë©”ëª¨ë¦¬ë¥¼ ì ‘ê·¼í•œ ì˜ë¯¸.
+		// myCal2.pi
+		
+
 	}
+
 }
