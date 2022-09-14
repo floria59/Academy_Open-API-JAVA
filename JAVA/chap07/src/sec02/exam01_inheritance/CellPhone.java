@@ -1,10 +1,14 @@
 package sec02.exam01_inheritance;
 
+// 기본생성자만 존재.
 public class CellPhone {
 
 	//필드
 	String model;
 	String color;
+	
+	// 기본생성자는 컴파일과정에 의하여 자동생성된다.
+	//CellPhone() {}
 	
 	//생성자
 //	CellPhone() {

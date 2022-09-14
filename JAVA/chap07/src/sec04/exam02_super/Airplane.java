@@ -1,5 +1,6 @@
 package sec04.exam02_super;
 
+// 기본생성자 자동생성.
 public class Airplane {
 
 	public void land() {

@@ -10,6 +10,7 @@ public class SupersonicAirplane extends Airplane {
 	public int flyMode = NORMAL;
 
 
+	// 재정의
 	@Override
 	public void fly() {
 		if(flyMode == SUPERSONIC) {
