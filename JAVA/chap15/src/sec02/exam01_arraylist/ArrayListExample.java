@@ -6,7 +6,7 @@ import java.util.List;
 public class ArrayListExample {
 
 	public static void main(String[] args) {
-		//List컬렉션 ? 특징 - 인덱스관리, 중복허용
+		//List컬렉션 ? 특징 - 인덱스관리(순서), 중복허용
 		
 		//1)ArrayList클래스
 		
